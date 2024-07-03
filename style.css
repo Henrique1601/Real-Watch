@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Orbitron", sans-serif;
+  transition: all 0.4s ease;
+}
+
+:root {
+  --body-back-color:#c9c7c7 ;
+  --color-back: #dddddd;
+  --text-color: black;
+  --time-color: rgb(177, 177, 177);
+  --icon-color: #ffff;
+  --icon-back-color: black;
+  --am_pm-color:#24292d;
+  --main-shadow:rgba(8, 8, 8, 0.7) ;/*#999898, #ffffff*/
+  --time-shadow:rgba(8, 8, 8, 0.7);/*#323030 #bfbdbd*/
+}
+.dark{
+  --body-back-color:#24292D;
+  --color-back: #323840;
+  --text-color:#FFFFFF ;
+  --time-color:#24292D ;
+  --icon-color:#323840 ;
+  --icon-back-color: #FFFFFF;
+  --am_pm-color:#ffffff;
+  --main-shadow:rgb(255, 255, 255, 0.7);
+  --time-shadow:rgb(255, 255, 255 , 0.7);
+}
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 500px;
+  min-height: 100vh;
+  background: var(--body-back-color);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 550px;
+  height: 250px;
+  background-color: var(--color-back);
+  border-radius: 20px;
+  box-shadow: -10px -10px 25px var(--main-shadow), 5px 5px 25px var(--main-shadow);/*#999898, #ffffff*/
+  position: relative;
+}
+
+.Main-hours {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  position: relative;
+  height: 85px;
+  width: 95px;
+  background-color: var(--time-color);
+  color: var(--text-color);
+  border-radius: 6px;
+  box-shadow: -2px -2px 5px var(--time-shadow) , 3px 3px 5px var(--time-shadow);
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.icon i{
+  position: absolute;
+  top: 17px;
+  right: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 20px;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+.icon .fa-moon{
+  background: var(--icon-back-color);
+  color: var(--icon-color);
+}
+.icon .fa-sun {
+  opacity: 0;
+  pointer-events: none;
+}
+.dark .fa-sun{
+  opacity: 1;
+  pointer-events: all;
+  background: var(--icon-back-color);
+  color: var(--icon-color);
+}
+.dark .fa-moon{
+  opacity: 0;
+  pointer-events: none;
+}
+.am_pm {
+  position: absolute;
+  top: 5rem;
+  right: 2.5rem;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--am_pm-color);
+}
+.time .text{
+  font-size: 18px;
+}
